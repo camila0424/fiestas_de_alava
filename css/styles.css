@@ -502,13 +502,20 @@ body {
   overflow-y: scroll;
   padding-right: 6px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,.5) transparent;
+  scrollbar-color: rgba(255,255,255,.85) rgba(255,255,255,.2);
+  scrollbar-gutter: stable;
 }
-.prog-day.featured .prog-events::-webkit-scrollbar { width: 4px; }
-.prog-day.featured .prog-events::-webkit-scrollbar-track { background: transparent; }
-.prog-day.featured .prog-events::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,.45);
+.prog-day.featured .prog-events::-webkit-scrollbar { width: 5px; display: block; }
+.prog-day.featured .prog-events::-webkit-scrollbar-track {
+  background: rgba(255,255,255,.2);
   border-radius: 999px;
+}
+.prog-day.featured .prog-events::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.85);
+  border-radius: 999px;
+}
+.prog-day.featured .prog-events::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 .prog-events li {
   display: flex;
