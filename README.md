@@ -8,7 +8,7 @@ El proyecto combina diseño editorial, animaciones y experiencia de usuario para
 
 ## 🌐 Demo
 
-👉 (https://github.com/camila0424/fiestas_de_alava.git)
+👉 (https://camila0424.github.io/fiestas_de_alava/)
 
 ---
 
