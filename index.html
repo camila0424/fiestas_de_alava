@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiestas de Álava 2026 · San Prudencio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ══════════════════════════════════ NAV ══════════════════════════════════ -->
+    <header class="site-header" id="site-header">
+      <nav class="nav-inner">
+        <a href="#" class="nav-logo">
+          <span class="logo-es">Fiestas de Álava</span>
+          <span class="logo-eu">Arabako Jaiak</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#quien">El Santo</a></li>
+          <li><a href="#programa">Programa</a></li>
+          <li><a href="#tradiciones">Tradiciones</a></li>
+          <li><a href="#busca">Busca</a></li>
+          <li><a href="#galeria">Galería</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ══════════════════════════════ HERO ════════════════════════════════════ -->
+      <section class="hero" id="hero">
+        <!-- Formas decorativas inspiradas en el cartel -->
+        <div class="hero-shapes" aria-hidden="true">
+          <div class="shape shape-circle"></div>
+          <div class="shape shape-fork"></div>
+          <div class="shape shape-spoon"></div>
+          <div class="shape shape-star"></div>
+          <div class="shape shape-blob"></div>
+          <div class="shape shape-diamond"></div>
+          <div class="shape shape-mushroom"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-overtitle">
+            <span class="eu">Arabako Jaiak</span>
+            <span class="sep">·</span>
+            <span class="es">Fiestas de Álava</span>
+          </p>
+          <h1 class="hero-title">
+            <em>San</em>
+            Prudencio
+          </h1>
+          <p class="hero-sub">y Nuestra Señora de Estíbaliz</p>
+          <div class="hero-date-badge">
+            <span class="date-range">28 abril — 1 mayo</span>
+            <span class="date-year">2026</span>
+          </div>
+          <div class="hero-countdown" id="countdown">
+            <div class="cd-item">
+              <span class="cd-num" id="cd-days">--</span
+              ><span class="cd-label">días</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="cd-item">
+              <span class="cd-num" id="cd-hours">--</span
+              ><span class="cd-label">horas</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="cd-item">
+              <span class="cd-num" id="cd-min">--</span
+              ><span class="cd-label">minutos</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="cd-item">
+              <span class="cd-num" id="cd-sec">--</span
+              ><span class="cd-label">segundos</span>
+            </div>
+          </div>
+          <a href="#programa" class="hero-cta">Ver el programa</a>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ QUIÉN FUE ══════════════════════════════ -->
+      <section class="quien" id="quien">
+        <div class="container">
+          <div class="section-tag">El patrón</div>
+          <div class="quien-grid">
+            <div class="quien-text">
+              <h2 class="section-title">
+                ¿Quién fue<br /><em>San Prudencio?</em>
+              </h2>
+              <p>
+                Prudencio nació en <strong>Armentia</strong>, pequeña aldea
+                alavesa hoy integrada en Vitoria-Gasteiz, alrededor del siglo V.
+                Humilde de carácter y profundo en fe, a los 15 años se retiró
+                como anacoreta a las cercanías de Soria junto a su maestro
+                Saturio, donde vivió siete años de contemplación y penitencia.
+              </p>
+              <p>
+                Evangelizó en zonas paganas y realizó, según la tradición,
+                numerosas curaciones milagrosas — entre ellas cruzar el río
+                Duero sin mojarse. Con el tiempo llegó a ser
+                <strong>Obispo de Tarazona</strong>, siendo apreciado por todos
+                como hombre de paz y mediador de conflictos.
+              </p>
+              <p>
+                Murió el <strong>28 de abril</strong> en Burgo de Osma. A
+                mediados del siglo VIII ya se le consideraba santo, y en
+                <strong>1644 fue proclamado oficialmente patrón de Álava</strong
+                >. Desde 1688, el 28 de abril es día festivo en el territorio.
+              </p>
+            </div>
+            <div class="quien-visual">
+              <div class="saint-card">
+                <div class="saint-card-inner">
+                  <div class="saint-icon-big" aria-hidden="true">✝</div>
+                  <div class="saint-card-data">
+                    <div class="data-row">
+                      <span>Nacido en</span><strong>Armentia, Álava</strong>
+                    </div>
+                    <div class="data-row">
+                      <span>Siglo</span><strong>V d.C.</strong>
+                    </div>
+                    <div class="data-row">
+                      <span>Cargo</span><strong>Obispo de Tarazona</strong>
+                    </div>
+                    <div class="data-row">
+                      <span>Patronato</span><strong>Desde 1644</strong>
+                    </div>
+                    <div class="data-row">
+                      <span>Festividad</span><strong>28 de abril</strong>
+                    </div>
+                    <div class="data-row">
+                      <span>Lugar de culto</span
+                      ><strong>Basílica de Armentia</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ PROGRAMA ═══════════════════════════════ -->
+      <section class="programa" id="programa">
+        <div class="container">
+          <div class="section-tag light">El programa</div>
+          <h2 class="section-title light">
+            Día a día<br /><em>de las fiestas</em>
+          </h2>
+          <p class="section-desc light">
+            Más de 82 actividades del 27 de abril al 1 de mayo. Este año la
+            Tamborrada celebra su 50 aniversario y la Retreta cumple 100 años.
+          </p>
+
+          <div class="programa-timeline">
+            <article class="prog-day" data-day="27">
+              <div class="prog-day-header">
+                <div class="prog-day-num">27</div>
+                <div class="prog-day-info">
+                  <span class="prog-weekday">Lunes</span>
+                  <span class="prog-month">Abril</span>
+                </div>
+                <div class="prog-day-tag">Víspera</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">19:00</span
+                  ><span class="ev-name">Tamborrada de tardeo</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+                <li>
+                  <span class="ev-time">21:00</span
+                  ><span class="ev-name">Retreta oficial</span
+                  ><span class="ev-place"
+                    >Balcón de la Diputación · 100 aniversario</span
+                  >
+                </li>
+                <li>
+                  <span class="ev-time">23:30</span
+                  ><span class="ev-name">Tamborrada nocturna</span
+                  ><span class="ev-place">Casco Medieval · 50 aniversario</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="prog-day featured" data-day="28">
+              <div class="prog-day-header">
+                <div class="prog-day-num">28 ★</div>
+                <div class="prog-day-info">
+                  <span class="prog-weekday">Martes</span>
+                  <span class="prog-month">Abril — Día Grande</span>
+                </div>
+                <div class="prog-day-tag tag-main">San Prudencio</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">09:00</span
+                  ><span class="ev-name">Zortziko de chistularis</span
+                  ><span class="ev-place">Centro ciudad</span>
+                </li>
+                <li>
+                  <span class="ev-time">Todo el día</span
+                  ><span class="ev-name">Romería popular a Armentia</span
+                  ><span class="ev-place">Basílica de San Prudencio</span>
+                </li>
+                <li>
+                  <span class="ev-time">Mañana</span
+                  ><span class="ev-name">Concurso gastronómico</span
+                  ><span class="ev-place">Campas de Armentia</span>
+                </li>
+                <li>
+                  <span class="ev-time">Mañana</span
+                  ><span class="ev-name">Deporte rural vasco</span
+                  ><span class="ev-place">Campas de Armentia</span>
+                </li>
+                <li>
+                  <span class="ev-time">Tarde</span
+                  ><span class="ev-name">Conciertos y espectáculos</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="prog-day" data-day="29">
+              <div class="prog-day-header">
+                <div class="prog-day-num">29</div>
+                <div class="prog-day-info">
+                  <span class="prog-weekday">Miércoles</span>
+                  <span class="prog-month">Abril</span>
+                </div>
+                <div class="prog-day-tag">Actividades</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">Mañana</span
+                  ><span class="ev-name">Donación de sangre</span
+                  ><span class="ev-place">Centro ciudad</span>
+                </li>
+                <li>
+                  <span class="ev-time">Todo el día</span
+                  ><span class="ev-name">Actividades populares</span
+                  ><span class="ev-place">Vitoria-Gasteiz</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="prog-day" data-day="30">
+              <div class="prog-day-header">
+                <div class="prog-day-num">30</div>
+                <div class="prog-day-info">
+                  <span class="prog-weekday">Jueves</span>
+                  <span class="prog-month">Abril</span>
+                </div>
+                <div class="prog-day-tag">Concierto</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">Noche</span
+                  ><span class="ev-name">Concierto de Kalakan</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+                <li>
+                  <span class="ev-time">Noche</span
+                  ><span class="ev-name">Música en directo</span
+                  ><span class="ev-place">Casco Viejo</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="prog-day" data-day="1">
+              <div class="prog-day-header">
+                <div class="prog-day-num">1 May</div>
+                <div class="prog-day-info">
+                  <span class="prog-weekday">Viernes</span>
+                  <span class="prog-month">Romería de cierre</span>
+                </div>
+                <div class="prog-day-tag tag-estibaliz">Estíbaliz</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">Mañana</span
+                  ><span class="ev-name"
+                    >Romería a Nuestra Señora de Estíbaliz</span
+                  ><span class="ev-place">Cerro de Estíbaliz</span>
+                </li>
+                <li>
+                  <span class="ev-time">Tarde</span
+                  ><span class="ev-name">Concursos, talleres y animación</span
+                  ><span class="ev-place">Campas de Estíbaliz</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ TRADICIONES ════════════════════════════ -->
+      <section class="tradiciones" id="tradiciones">
+        <div class="container">
+          <div class="section-tag">Tradiciones</div>
+          <h2 class="section-title">Lo que no puedes<br /><em>perderte</em></h2>
+          <p class="section-desc">
+            Cada acto tiene siglos de historia. Aquí las tradiciones que hacen
+            única a esta fiesta.
+          </p>
+        </div>
+
+        <!-- CARRUSEL -->
+        <div class="carousel-wrapper">
+          <button
+            class="carousel-btn carousel-prev"
+            id="carouselPrev"
+            aria-label="Anterior"
+          >
+            &#8592;
+          </button>
+
+          <div class="carousel-track-outer">
+            <div class="carousel-track" id="carouselTrack">
+              <article class="trad-card" data-color="red">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">🥁</span>
+                  <span class="card-num-deco">01</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Música · 50 aniversario</div>
+                  <h3 class="card-title">La Tamborrada</h3>
+                  <p class="card-hist">
+                    La Tamborrada de Álava celebra en 2026 su 50 aniversario.
+                    Nació en los años 70 como homenaje a las sociedades
+                    gastronómicas alavesas, inspirada en la mítica tamborrada
+                    donostiarra.
+                  </p>
+                  <p class="card-body-text">
+                    Cocineros y socios de cuadrillas desfilan vestidos con
+                    delantales blancos y sombreros al son del <em>txistu</em> y
+                    el tambor por el Casco Medieval. El desfile nocturno arranca
+                    a las 23:30 del 27 de abril, con concentración en la Plaza
+                    de la Provincia.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 27 de abril · 23:30h</span>
+                    <span class="meta-place">📍 Casco Medieval</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="trad-card" data-color="amber">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">🎺</span>
+                  <span class="card-num-deco">02</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Música · 100 aniversario</div>
+                  <h3 class="card-title">La Retreta</h3>
+                  <p class="card-hist">
+                    En 2026 se cumplen exactamente 100 años desde que por
+                    primera vez se interpretó la retreta desde el balcón del
+                    Palacio de la Diputación Foral de Álava, en la Plaza de la
+                    Provincia.
+                  </p>
+                  <p class="card-body-text">
+                    El Coro Joven de Álava, músicos locales y agrupaciones
+                    especiales iluminan la noche previa al día grande. El
+                    espectáculo piromusical de fuegos artificiales en formato
+                    ecosostenible cierra la noche.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 27 de abril · 21:00h</span>
+                    <span class="meta-place">📍 Balcón de la Diputación</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="trad-card" data-color="green">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">⛪</span>
+                  <span class="card-num-deco">03</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Espiritualidad · Tradición</div>
+                  <h3 class="card-title">Romería a Armentia</h3>
+                  <p class="card-hist">
+                    Desde al menos el siglo XVII, miles de alaveses peregrinan
+                    cada 28 de abril a la Basílica de Armentia para venerar las
+                    reliquias del Santo Patrón. La basílica románica data del
+                    siglo XII.
+                  </p>
+                  <p class="card-body-text">
+                    Los chistularis y trompeteros de la Diputación interpretan
+                    el <em>zortziko</em> al amanecer. Misas solemnes, juegos
+                    infantiles, espectáculos callejeros y conciertos llenan las
+                    campas que rodean la basílica.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 28 de abril · Todo el día</span>
+                    <span class="meta-place">📍 Basílica de Armentia</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="trad-card" data-color="teal">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">🍄</span>
+                  <span class="card-num-deco">04</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Gastronomía · Primavera</div>
+                  <h3 class="card-title">Los Perretxikos</h3>
+                  <p class="card-hist">
+                    El revuelto de perretxikos (setas de San Jorge) con
+                    caracoles es el plato simbólico de San Prudencio desde
+                    tiempos inmemoriales. Brotan justo en primavera, para estas
+                    fechas.
+                  </p>
+                  <p class="card-body-text">
+                    Los concursos gastronómicos en las campas de Armentia
+                    enfrentan a las mejores cuadrillas y sociedades
+                    gastronómicas de Álava. Las txosnas sirven txakoli frío,
+                    pintxos y las delicias de la temporada.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 28 de abril · Mañana</span>
+                    <span class="meta-place">📍 Campas de Armentia</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="trad-card" data-color="purple">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">💃</span>
+                  <span class="card-num-deco">05</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Danza · Cultura vasca</div>
+                  <h3 class="card-title">Danzas Tradicionales</h3>
+                  <p class="card-hist">
+                    El aurresku, danza de honor vasca con siglos de historia, es
+                    uno de los actos más solemnes de las fiestas. Los dantzaris
+                    de Arabako Dantzarien Biltzarra son los guardianes de esta
+                    tradición.
+                  </p>
+                  <p class="card-body-text">
+                    Los grupos folklóricos desfilan con trajes tradicionales
+                    vascos. El Fanfarre Eguna reúne fanfarrias y músicos de todo
+                    el territorio. Las cuadrillas compiten en el Concurso de
+                    Cuadrillas de Álava.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 28 de abril · Tarde</span>
+                    <span class="meta-place">📍 Plaza de la Provincia</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="trad-card" data-color="blue">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">🏋️</span>
+                  <span class="card-num-deco">06</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Deporte rural vasco</div>
+                  <h3 class="card-title">Kirol Herrikoia</h3>
+                  <p class="card-hist">
+                    El deporte rural vasco forma parte inseparable del 28 de
+                    abril en Armentia. Desde hace décadas, las campas acogen
+                    exhibiciones de aizkolaris, harrijasotzaileak y otros
+                    deportes autóctonos.
+                  </p>
+                  <p class="card-body-text">
+                    Cortadores de troncos (aizkolaris), levantadores de piedra
+                    (harrijasotzaileak) y otras modalidades de la tradición
+                    vasca se dan cita en un ambiente festivo y familiar a los
+                    pies de la basílica.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 28 de abril · Mañana</span>
+                    <span class="meta-place">📍 Campas de Armentia</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="trad-card" data-color="pink">
+                <div class="card-icon-wrap">
+                  <span class="card-icon" aria-hidden="true">⛰️</span>
+                  <span class="card-num-deco">07</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-tag">Espiritualidad · Cierre</div>
+                  <h3 class="card-title">Romería a Estíbaliz</h3>
+                  <p class="card-hist">
+                    El 1 de mayo, Nuestra Señora de Estíbaliz preside el cierre
+                    de las fiestas. El cerro de Estíbaliz, con su románica
+                    basílica, ha sido lugar de peregrinación alavesa durante más
+                    de ocho siglos.
+                  </p>
+                  <p class="card-body-text">
+                    La romería al cerro de Estíbaliz cierra las fiestas en un
+                    ambiente de recogimiento y alegría. Desde primera hora,
+                    talleres, exhibiciones y animación musical llenan las campas
+                    hasta el mediodía.
+                  </p>
+                  <div class="card-meta">
+                    <span class="meta-day">📅 1 de mayo · Mañana</span>
+                    <span class="meta-place">📍 Cerro de Estíbaliz</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- /carousel-track -->
+          </div>
+          <!-- /carousel-track-outer -->
+
+          <button
+            class="carousel-btn carousel-next"
+            id="carouselNext"
+            aria-label="Siguiente"
+          >
+            &#8594;
+          </button>
+        </div>
+        <!-- /carousel-wrapper -->
+
+        <!-- Indicadores -->
+        <div class="carousel-dots" id="carouselDots"></div>
+      </section>
+
+      <!-- ══════════════════════════ BÚSQUEDA & FILTROS ═══════════════════════ -->
+      <section class="busca" id="busca">
+        <div class="container">
+          <div class="section-tag">Encuentra tu plan</div>
+          <h2 class="section-title">Busca<br /><em>&amp; Filtra</em></h2>
+
+          <div class="search-box">
+            <span class="si" aria-hidden="true">⚲</span>
+            <input
+              class="sinput"
+              id="searchInput"
+              type="search"
+              placeholder="Busca: tamborrada, gastronomía, danza..."
+              autocomplete="off"
+            />
+            <span
+              class="sclear"
+              id="searchClear"
+              role="button"
+              aria-label="Limpiar búsqueda"
+              >Limpiar ✕</span
+            >
+          </div>
+
+          <div class="chips" id="filterChips" role="group" aria-label="Filtros">
+            <button class="chip chip--on" data-filter="all">Todos</button>
+            <button class="chip chip--mus" data-filter="musica">
+              🎵 Música
+            </button>
+            <button class="chip chip--gas" data-filter="gastronomia">
+              🍄 Gastronomía
+            </button>
+            <button class="chip chip--dan" data-filter="danza">💃 Danza</button>
+            <button class="chip" data-filter="deporte">🏋️ Deporte</button>
+            <button class="chip" data-filter="religion">⛪ Religión</button>
+            <button class="chip" data-filter="27">27 Abr</button>
+            <button class="chip" data-filter="28">28 Abr ★</button>
+            <button class="chip" data-filter="1">1 May</button>
+          </div>
+
+          <p class="res-count" id="resCount" aria-live="polite">Cargando…</p>
+          <div
+            class="search-results"
+            id="searchResults"
+            aria-live="polite"
+          ></div>
+          <p class="no-results" id="noResults">
+            Ups, no encontramos nada 🙁 Prueba con otra búsqueda.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ GALERÍA ════════════════════════════════ -->
+      <section class="galeria" id="galeria">
+        <div class="container">
+          <div class="section-tag light">Galería</div>
+          <h2 class="section-title light">
+            La fiesta<br /><em>en imágenes</em>hero-title
+          </h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div
+            class="gallery-item gallery-big g1"
+            data-label="Tamborrada · Casco Medieval"
+          >
+            <img
+              src="imagenes/tamborrada.png"
+              alt="La Tamborrada"
+              class="gallery-img"
+            />
+            <span class="gallery-name">La Tamborrada</span>
+          </div>
+          <div
+            class="gallery-item g2"
+            data-label="Retreta · Balcón de la Diputación"
+          >
+            <img
+              src="imagenes/retreta.png"
+              alt="La Retreta"
+              class="gallery-img"
+            />
+            <span class="gallery-name">La Retreta</span>
+          </div>
+          <div class="gallery-item g3" data-label="Romería a Armentia">
+            <img
+              src="imagenes/armentia.png"
+              alt="Romería a Armentia"
+              class="gallery-img"
+            />
+            <span class="gallery-name">Romería a Armentia</span>
+          </div>
+        </div>
+
+        <div class="gallery-bottom">
+          <div
+            class="gallery-item g-small g4"
+            data-label="Los Perretxikos · Gastronomía"
+          >
+            <img
+              src="imagenes/perretxicos.png"
+              alt="Los Perretxikos"
+              class="gallery-img"
+            />
+            <span class="gallery-name">Los Perretxikos</span>
+          </div>
+          <div
+            class="gallery-item g-large g5"
+            data-label="Danzas Tradicionales vascas"
+          >
+            <img
+              src="imagenes/danzas.png"
+              alt="Danzas Tradicionales"
+              class="gallery-img"
+            />
+            <span class="gallery-name">Danzas Tradicionales</span>
+          </div>
+          <div
+            class="gallery-item g-large g6"
+            data-label="Kirol Herrikoia · Deporte rural vasco"
+          >
+            <img
+              src="imagenes/deportes.png"
+              alt="Kirol Herrikoia"
+              class="gallery-img"
+            />
+            <span class="gallery-name">Kirol Herrikoia</span>
+          </div>
+          <div class="gallery-item g-small g7" data-label="Romería a Estíbaliz">
+            <img
+              src="imagenes/estibaliz.png"
+              alt="Romería a Estíbaliz"
+              class="gallery-img"
+            />
+            <span class="gallery-name">Romería a Estíbaliz</span>
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+          <div class="lightbox-overlay" id="lightboxOverlay"></div>
+          <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">✕</button>
+            <div class="lightbox-img-wrap" id="lightboxImg"></div>
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════ CTA STRIP ══════════════════════════════ -->
+      <section class="cta-strip">
+        <div class="container">
+          <p class="cta-text"><em>¡Áraba maite!</em> — Álava querida</p>
+          <p class="cta-sub">
+            28 de abril de 2026 · Vitoria-Gasteiz y Armentia
+          </p>
+          <a href="#" class="cta-link">Volver al inicio ↑</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════════════════════════ FOOTER ════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <p class="footer-brand">Fiestas de Álava</p>
+            <p class="footer-brand-eu">Arabako Jaiak 2026</p>
+          </div>
+          <div class="footer-col">
+            <p class="footer-label">Fechas</p>
+            <p>27 abril — 1 mayo / 2026</p>
+            <p>San Prudencio: 28 de abril</p>
+          </div>
+          <div class="footer-col">
+            <p class="footer-label">Lugar</p>
+            <p>Vitoria-Gasteiz</p>
+            <p>Basílica de Armentia</p>
+            <p>Cerro de Estíbaliz</p>
+          </div>
+          <div class="footer-col">
+            <p class="footer-label">Organiza</p>
+            <p>Diputación Foral de Álava</p>
+            <p>Arabako Foru Aldundia</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Proyecto web educativo · Fiestas de Álava 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
