@@ -497,6 +497,8 @@ body {
 .prog-day-tag.tag-estibaliz { background: var(--mint); color: var(--dark); }
 
 .prog-events { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+/* Día 28 (featured / fondo coral): scroll con barra siempre visible */
 .prog-day.featured .prog-events {
   max-height: 160px;
   overflow-y: scroll;
