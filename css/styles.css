@@ -1061,12 +1061,34 @@ mark {
   .gallery-item.gallery-big { grid-column: span 2; }
 }
 
+/* ══════════ HERO BLOBS & DECOS ══════════ */
+.hero__blob { position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; }
+.hero__blob--1 { width: 340px; height: 340px; background: #FF6B47; opacity: .22; top: -100px; left: -80px; animation: blobFloat 7s ease-in-out infinite; }
+.hero__blob--2 { width: 260px; height: 260px; background: #FFD93D; opacity: .28; bottom: -60px; right: -60px; animation: blobFloat 9s ease-in-out infinite 2s; }
+.hero__blob--3 { width: 180px; height: 180px; background: #FF8FA3; opacity: .25; top: 20%; right: 12%; animation: blobFloat 6s ease-in-out infinite 1s; }
+.hero__blob--4 { width: 120px; height: 120px; background: #C8463A; opacity: .2; bottom: 18%; left: 10%; animation: blobFloat 8s ease-in-out infinite 3s; }
+.hero__deco { position: absolute; pointer-events: none; font-size: 4rem; line-height: 1; z-index: 1; }
+.hero__deco--fork  { top: 14%; left: 6%; animation: deco1 5s ease-in-out infinite; }
+.hero__deco--spoon { bottom: 18%; right: 7%; animation: deco2 6s ease-in-out infinite; font-size: 3.5rem; }
+.hero__deco--star  { top: 18%; right: 18%; font-size: 2.8rem; animation: spin 18s linear infinite; }
+.hero__deco--note  { bottom: 22%; left: 18%; font-size: 3rem; animation: deco1 7s ease-in-out infinite 2s; }
+@keyframes blobFloat { 0%,100%{transform:scale(1) translate(0,0);} 50%{transform:scale(1.06) translate(6px,-10px);} }
+@keyframes deco1 { 0%,100%{transform:translateY(0) rotate(-8deg);} 50%{transform:translateY(-14px) rotate(5deg);} }
+@keyframes deco2 { 0%,100%{transform:translateY(0) rotate(12deg);} 50%{transform:translateY(-18px) rotate(-5deg);} }
+@keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+
 @media (max-width: 768px) {
   .hero {
-    min-height: 100svh;
-    padding-top: 70px;
-    padding-bottom: 20px;
+    height: calc(100svh - var(--nav-h));
+    min-height: unset;
+    padding: 0;
+    justify-content: center;
   }
+  .hero-title { font-size: 3.8rem; }
+  .hero-title em { font-size: 2rem; }
+  .hero-sub { margin-bottom: 14px; }
+  .hero-date-badge { margin-bottom: 14px; }
+  .hero-countdown { margin-bottom: 16px; }
 
   .hero__content {
     padding: 0.5rem 1.2rem;
@@ -1141,7 +1163,6 @@ mark {
 }
 
 @media (max-width: 600px) {
-  .hero { padding: 0; height: calc(100vh - var(--nav-h)); }
   .hero-countdown { padding: 8px 16px; }
   .cd-num { font-size: 1.6rem; }
 
@@ -1156,35 +1177,26 @@ mark {
   .gallery-item.gallery-big,
   .gallery-item.gallery-full { grid-column: span 1; }
 
-  .hero__deco { display: none; }
-
   .hero {
-    min-height: 100vh;
-    padding-top: 80px;
-    padding-bottom: 28px;
+    height: calc(100svh - var(--nav-h));
+    min-height: unset;
+    padding: 0;
+    justify-content: center;
   }
+  .hero-title { font-size: 3rem; }
+  .hero-title em { font-size: 1.7rem; color: var(--dark); }
+  .hero-sub { font-size: .75rem; margin-bottom: 10px; }
+  .hero-date-badge { padding: 6px 14px; margin-bottom: 10px; }
+  .hero-countdown { margin-bottom: 14px; }
+  .hero-scroll-hint { bottom: 26px; }
 
-  .hero__content {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
+  /* Mostrar los 4 cubiertos en mobile pequeño con animaciones */
+  .hero__deco { display: block; font-size: 1.6rem; }
+  .hero__deco--fork  { top: 7%; bottom: auto; left: 8%; animation: deco1 5s ease-in-out infinite; }
+  .hero__deco--spoon { bottom: 20%; right: 4%; font-size: 1.4rem; animation: deco2 6s ease-in-out infinite; }
+  .hero__deco--star  { top: 7%; right: 5%; font-size: 1.3rem; animation: spin 18s linear infinite; }
+  .hero__deco--note  { bottom: 35%; left: 4%; font-size: 1.4rem; animation: deco1 7s ease-in-out infinite 2s; }
 }
-
-/* ══════════ HERO BLOBS & DECOS ══════════ */
-.hero__blob { position: absolute; border-radius: 50%; pointer-events: none; }
-.hero__blob--1 { width: 340px; height: 340px; background: #FF6B47; opacity: .22; top: -100px; left: -80px; animation: blobFloat 7s ease-in-out infinite; }
-.hero__blob--2 { width: 260px; height: 260px; background: #FFD93D; opacity: .28; bottom: -60px; right: -60px; animation: blobFloat 9s ease-in-out infinite 2s; }
-.hero__blob--3 { width: 180px; height: 180px; background: #FF8FA3; opacity: .25; top: 20%; right: 12%; animation: blobFloat 6s ease-in-out infinite 1s; }
-.hero__blob--4 { width: 120px; height: 120px; background: #C8463A; opacity: .2; bottom: 18%; left: 10%; animation: blobFloat 8s ease-in-out infinite 3s; }
-.hero__deco { position: absolute; pointer-events: none; font-size: 4rem; line-height: 1; z-index: 1; }
-.hero__deco--fork  { top: 14%; left: 6%; animation: deco1 5s ease-in-out infinite; }
-.hero__deco--spoon { bottom: 18%; right: 7%; animation: deco2 6s ease-in-out infinite; font-size: 3.5rem; }
-.hero__deco--star  { top: 18%; right: 18%; font-size: 2.8rem; animation: spin 18s linear infinite; }
-.hero__deco--note  { bottom: 22%; left: 18%; font-size: 3rem; animation: deco1 7s ease-in-out infinite 2s; }
-@keyframes blobFloat { 0%,100%{transform:scale(1) translate(0,0);} 50%{transform:scale(1.06) translate(6px,-10px);} }
-@keyframes deco1 { 0%,100%{transform:translateY(0) rotate(-8deg);} 50%{transform:translateY(-14px) rotate(5deg);} }
-@keyframes deco2 { 0%,100%{transform:translateY(0) rotate(12deg);} 50%{transform:translateY(-18px) rotate(-5deg);} }
-@keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
 
 /* Animaciones de entrada para títulos */
 @keyframes slideInLeft { from{opacity:0;transform:translateX(-60px);} to{opacity:1;transform:translateX(0);} }
