@@ -107,8 +107,7 @@ body {
   background: var(--blue);
   padding: 0;
   position: relative;
-  overflow: hidden;
-  overflow-x: clip;
+  overflow: clip;
   height: calc(100vh - var(--nav-h));
   display: flex;
   flex-direction: column;
