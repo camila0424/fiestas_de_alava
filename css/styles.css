@@ -1077,6 +1077,19 @@ mark {
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item.gallery-big,
   .gallery-item.gallery-full { grid-column: span 1; }
+
+  .hero__deco { display: none; }
+
+  .hero {
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 28px;
+  }
+
+  .hero__content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 /* ══════════ HERO BLOBS & DECOS ══════════ */
