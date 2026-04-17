@@ -1062,6 +1062,66 @@ mark {
   .gallery-item.gallery-big { grid-column: span 2; }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .hero__content {
+    padding: 0.5rem 1.2rem;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.55rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__title {
+    font-size: 2.8rem;
+    line-height: 0.88;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero__sub {
+    font-size: 0.78rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero__countdown {
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.8rem;
+    gap: 0.3rem;
+  }
+
+  .count-num {
+    font-size: 1.5rem;
+  }
+
+  .count-label {
+    font-size: 0.45rem;
+  }
+
+  .count-block {
+    min-width: 32px;
+  }
+
+  .count-sep {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero__cta {
+    font-size: 0.68rem;
+    padding: 0.75rem 1.8rem;
+  }
+
+  .hero__deco {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .hero { padding: 0; height: calc(100vh - var(--nav-h)); }
   .hero-countdown { padding: 8px 16px; }
