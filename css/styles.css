@@ -1120,6 +1120,25 @@ mark {
   .hero__deco {
     display: none;
   }
+
+  /* Reducir blobs para que no empujen el contenido */
+  .hero__blob--1 { width: 180px; height: 180px; top: -50px; left: -50px; }
+  .hero__blob--2 { width: 140px; height: 140px; bottom: -30px; right: -30px; }
+  .hero__blob--3 { width: 100px; height: 100px; top: 10%; right: 5%; }
+  .hero__blob--4 { width: 80px;  height: 80px;  bottom: 12%; left: 5%; }
+
+  /* Volver a mostrar cubiertos pero más pequeños y reposicionados */
+  .hero__deco { display: block; font-size: 2rem; }
+  .hero__deco--fork  { top: auto; bottom: 25%; left: 4%; }
+  .hero__deco--spoon { bottom: 18%; right: 4%; font-size: 1.8rem; }
+  .hero__deco--star  { display: none; }
+  .hero__deco--note  { display: none; }
+
+  /* Subir el contenido */
+  .hero__content {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
