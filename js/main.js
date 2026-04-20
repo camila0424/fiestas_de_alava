@@ -9,7 +9,7 @@
   function pad(n) { return String(n).padStart(2, '0'); }
 
   function tick() {
-    var diff = new Date('2026-04-28T00:00:00') - new Date();
+    var diff = new Date('2026-04-24T00:00:00') - new Date();
     if (diff <= 0) {
       ['cd-days','cd-hours','cd-min','cd-sec'].forEach(function(id) {
         var el = document.getElementById(id);
