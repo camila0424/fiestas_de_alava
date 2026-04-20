@@ -136,10 +136,23 @@
                 >. Desde 1688, el 28 de abril es día festivo en el territorio.
               </p>
             </div>
-            <div class="quien-visual">
+            <div>
               <div class="saint-card">
                 <div class="saint-card-inner">
-                  <div class="saint-icon-big" aria-hidden="true">✝</div>
+                  <img
+                    src="imagenes/san-prudencio.png"
+                    alt="San Prudencio de Armentia"
+                    style="
+                      width: 90px;
+                      height: 90px;
+                      object-fit: cover;
+                      object-position: top;
+                      border-radius: 50%;
+                      border: 2.5px solid #1a1a18;
+                      display: block;
+                      margin: 0 auto 12px;
+                    "
+                  />
                   <div class="saint-card-data">
                     <div class="data-row">
                       <span>Nacido en</span><strong>Armentia, Álava</strong>
@@ -183,13 +196,17 @@
           <p class="section-desc light">
             Más de 82 actividades del 27 de abril al 1 de mayo. Este año la
             Tamborrada celebra su 50 aniversario y la Retreta cumple 100 años.
+            <br />
+            <em>
+              (Presiona sobre cada evento para ver su ubicación en el mapa)
+            </em>
           </p>
 
           <div class="programa-timeline">
             <article class="prog-day" data-day="27">
               <div class="prog-day-header">
                 <div class="prog-day-num">27</div>
-                <div class="prog-day-info">
+                <div>
                   <span class="prog-weekday">Lunes</span>
                   <span class="prog-month">Abril</span>
                 </div>
@@ -219,7 +236,7 @@
             <article class="prog-day featured" data-day="28">
               <div class="prog-day-header">
                 <div class="prog-day-num">28 ★</div>
-                <div class="prog-day-info">
+                <div>
                   <span class="prog-weekday">Martes</span>
                   <span class="prog-month">Abril — Día Grande</span>
                 </div>
@@ -257,7 +274,7 @@
             <article class="prog-day" data-day="29">
               <div class="prog-day-header">
                 <div class="prog-day-num">29</div>
-                <div class="prog-day-info">
+                <div>
                   <span class="prog-weekday">Miércoles</span>
                   <span class="prog-month">Abril</span>
                 </div>
@@ -280,7 +297,7 @@
             <article class="prog-day" data-day="30">
               <div class="prog-day-header">
                 <div class="prog-day-num">30</div>
-                <div class="prog-day-info">
+                <div>
                   <span class="prog-weekday">Jueves</span>
                   <span class="prog-month">Abril</span>
                 </div>
@@ -303,7 +320,7 @@
             <article class="prog-day" data-day="1">
               <div class="prog-day-header">
                 <div class="prog-day-num">1 May</div>
-                <div class="prog-day-info">
+                <div>
                   <span class="prog-weekday">Viernes</span>
                   <span class="prog-month">Romería de cierre</span>
                 </div>
@@ -655,7 +672,11 @@
             />
             <span class="gallery-name">La Retreta</span>
           </div>
-          <div class="gallery-item g3" data-label="Romería a Armentia" data-video="armentia">
+          <div
+            class="gallery-item g3"
+            data-label="Romería a Armentia"
+            data-video="armentia"
+          >
             <img
               src="imagenes/armentia.png"
               alt="Romería a Armentia"
@@ -702,7 +723,11 @@
             />
             <span class="gallery-name">Kirol Herrikoia</span>
           </div>
-          <div class="gallery-item g-small g7" data-label="Romería a Estíbaliz" data-video="estibaliz">
+          <div
+            class="gallery-item g-small g7"
+            data-label="Romería a Estíbaliz"
+            data-video="estibaliz"
+          >
             <img
               src="imagenes/estibaliz.png"
               alt="Romería a Estíbaliz"
@@ -765,6 +790,43 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal de ubicación -->
+    <div class="location-modal" id="locationModal">
+      <div class="location-overlay" id="locationOverlay"></div>
+      <div class="location-card">
+        <button class="location-close" id="locationClose">✕</button>
+        <div class="location-header">
+          <span class="location-day-badge" id="modalDayBadge"></span>
+          <h3 class="location-title" id="modalTitle"></h3>
+          <p class="location-place" id="modalPlace">
+            📍 <span id="modalPlaceName"></span>
+          </p>
+        </div>
+        <div class="location-map">
+          <iframe
+            id="modalMapIframe"
+            width="100%"
+            height="220"
+            style="border: 0; border-radius: 10px"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src=""
+          >
+          </iframe>
+        </div>
+        <a
+          class="location-maps-btn"
+          id="modalMapsBtn"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🗺️ Ver cómo llegar en Google Maps
+        </a>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
