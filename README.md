@@ -8,7 +8,7 @@ El proyecto combina diseño editorial, animaciones y experiencia de usuario para
 
 ## 🌐 Demo
 
-👉 (https://camila0424.github.io/fiestas_de_alava/)
+👉 (https://fiesta-san-prudecio.vercel.app/)
 
 ---
 
@@ -103,7 +103,7 @@ fiestas-alava-2026/
 1. Clonar el repositorio:
 
 ```
-git clone https://github.com/tu-usuario/fiestas-alava-2026.git
+git clone https://github.com/camila0424/fiestas_de_alava.git
 ```
 
 2. Abrir el archivo:
