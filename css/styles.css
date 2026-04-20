@@ -994,6 +994,8 @@ mark {
 }
 .cta-link:hover  { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
 .cta-link:active { transform: translate(2px, 2px);  box-shadow: 1px 1px 0 var(--dark); }
+.cta-link--secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); margin-left: 12px; }
+.cta-link--secondary:hover { background: rgba(255,255,255,.1); border-color: #fff; }
 
 /* ══════════ FOOTER ══════════ */
 .site-footer {
@@ -1036,6 +1038,8 @@ mark {
 }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 16px; }
 .footer-bottom p { font-size: .62rem; color: rgba(255,255,255,.22); text-align: center; }
+.footer-portfolio-link { color: rgba(255,255,255,.45); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.2); transition: color .2s, border-color .2s; }
+.footer-portfolio-link:hover { color: var(--yellow); border-color: var(--yellow); }
 
 /* ══════════ RESPONSIVE ══════════ */
 @media (max-width: 900px) {
