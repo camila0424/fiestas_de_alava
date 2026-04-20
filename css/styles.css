@@ -404,9 +404,10 @@ body {
 /* ══════════ PROGRAMA ══════════ */
 .programa {
   background: var(--yellow);
-  padding: 80px 0 48px;
+  padding: 48px 0 48px;
   position: relative;
   overflow: hidden;
+  scroll-margin-top: var(--nav-h);
   min-height: calc(100vh - var(--nav-h));
   display: flex;
   flex-direction: column;
@@ -429,24 +430,28 @@ body {
   pointer-events: none;
 }
 
+.prog-carousel-wrapper {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.prog-track-outer { overflow: hidden; flex: 1; }
+
 .programa-timeline {
   display: flex;
   gap: 12px;
-  margin-top: 16px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  transition: transform .4s cubic-bezier(.25,.46,.45,.94);
 }
-.programa-timeline::-webkit-scrollbar { display: none; }
 
 .prog-day {
-  flex: 1;
+  flex: 0 0 auto;
   min-width: 160px;
   background: #fff;
   border: var(--border);
   border-radius: var(--radius);
-  padding: 16px 12px;
+  padding: 10px 12px;
   box-shadow: var(--shadow);
   transition: transform .2s, box-shadow .2s;
 }
@@ -461,10 +466,10 @@ body {
 .prog-day.featured .ev-time { color: var(--yellow); }
 .prog-day.featured .prog-events li { border-color: rgba(255,255,255,.2); }
 
-.prog-day-header { margin-bottom: 12px; }
+.prog-day-header { margin-bottom: 8px; }
 .prog-day-num {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--dark);
   line-height: 1;
 }
@@ -1170,8 +1175,7 @@ mark {
   .hero-countdown { padding: 8px 16px; }
   .cd-num { font-size: 1.6rem; }
 
-  .programa-timeline { flex-direction: column; }
-  .prog-day { min-width: auto; }
+  .prog-day { min-width: 75vw; }
 
   .carousel-wrapper { padding: 0 12px; }
   .trad-card { flex: 0 0 240px; }

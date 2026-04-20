@@ -194,15 +194,93 @@
             Día a día<br /><em>de las fiestas</em>
           </h2>
           <p class="section-desc light">
-            Más de 82 actividades del 27 de abril al 1 de mayo. Este año la
-            Tamborrada celebra su 50 aniversario y la Retreta cumple 100 años.
-            <br />
+            Del 24 de abril al 1 de mayo. Este año la Feria de los Desagravios
+            en Estíbaliz celebra su 50 aniversario.
+
             <em>
               (Presiona sobre cada evento para ver su ubicación en el mapa)
             </em>
           </p>
 
-          <div class="programa-timeline">
+          <div class="prog-carousel-wrapper">
+            <button class="carousel-btn carousel-prev" id="progPrev" aria-label="Día anterior">&#8592;</button>
+            <div class="prog-track-outer">
+          <div class="programa-timeline" id="progTrack">
+            <article class="prog-day" data-day="24">
+              <div class="prog-day-header">
+                <div class="prog-day-num">24</div>
+                <div>
+                  <span class="prog-weekday">Viernes</span>
+                  <span class="prog-month">Abril</span>
+                </div>
+                <div class="prog-day-tag">Pregón Oficial</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">20:00</span
+                  ><span class="ev-name">Pregón · Antonio Altarriba</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+                <li>
+                  <span class="ev-time">21:00</span
+                  ><span class="ev-name">Concierto tributo a Bruno Mars</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="prog-day" data-day="25">
+              <div class="prog-day-header">
+                <div class="prog-day-num">25</div>
+                <div>
+                  <span class="prog-weekday">Sábado</span>
+                  <span class="prog-month">Abril</span>
+                </div>
+                <div class="prog-day-tag">Fanfarre &amp; Gastronomía</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">10:00</span
+                  ><span class="ev-name"
+                    >Concurso de platos típicos alaveses</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+                <li>
+                  <span class="ev-time">Tarde</span
+                  ><span class="ev-name">Arabako Fanfarre Eguna · Danzas</span
+                  ><span class="ev-place">Centro ciudad</span>
+                </li>
+                <li>
+                  <span class="ev-time">21:00</span
+                  ><span class="ev-name">Concierto A Contra Blues</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="prog-day" data-day="26">
+              <div class="prog-day-header">
+                <div class="prog-day-num">26</div>
+                <div>
+                  <span class="prog-weekday">Domingo</span>
+                  <span class="prog-month">Abril</span>
+                </div>
+                <div class="prog-day-tag">Euskal Gunea</div>
+              </div>
+              <ul class="prog-events">
+                <li>
+                  <span class="ev-time">Mañana</span
+                  ><span class="ev-name">Coro Kantuz Blai · Pasacalles</span
+                  ><span class="ev-place">Centro ciudad</span>
+                </li>
+                <li>
+                  <span class="ev-time">21:00</span
+                  ><span class="ev-name">Muxutruk en concierto</span
+                  ><span class="ev-place">Plaza del Arca · Euskal Gunea</span>
+                </li>
+              </ul>
+            </article>
+
             <article class="prog-day" data-day="27">
               <div class="prog-day-header">
                 <div class="prog-day-num">27</div>
@@ -210,25 +288,25 @@
                   <span class="prog-weekday">Lunes</span>
                   <span class="prog-month">Abril</span>
                 </div>
-                <div class="prog-day-tag">Víspera</div>
+                <div class="prog-day-tag">La Víspera</div>
               </div>
               <ul class="prog-events">
                 <li>
                   <span class="ev-time">19:00</span
-                  ><span class="ev-name">Tamborrada de tardeo</span
-                  ><span class="ev-place">Plaza de la Provincia</span>
+                  ><span class="ev-name">Tamborrada · 1ª sesión</span
+                  ><span class="ev-place">Centro ciudad</span>
                 </li>
                 <li>
                   <span class="ev-time">21:00</span
-                  ><span class="ev-name">Retreta oficial</span
-                  ><span class="ev-place"
-                    >Balcón de la Diputación · 100 aniversario</span
-                  >
+                  ><span class="ev-name"
+                    >Retreta oficial + espectáculo piromusical</span
+                  ><span class="ev-place">Balcón de la Diputación</span>
                 </li>
                 <li>
-                  <span class="ev-time">23:30</span
-                  ><span class="ev-name">Tamborrada nocturna</span
-                  ><span class="ev-place">Casco Medieval · 50 aniversario</span>
+                  <span class="ev-time">00:00</span
+                  ><span class="ev-name"
+                    >Tamborrada · 2ª sesión (medianoche)</span
+                  ><span class="ev-place">Centro ciudad</span>
                 </li>
               </ul>
             </article>
@@ -244,29 +322,41 @@
               </div>
               <ul class="prog-events">
                 <li>
-                  <span class="ev-time">09:00</span
-                  ><span class="ev-name">Zortziko de chistularis</span
+                  <span class="ev-time">9:00</span
+                  ><span class="ev-name"
+                    >Zortziko · Chistularis y trompeteros</span
+                  ><span class="ev-place">Plaza de la Provincia</span>
+                </li>
+                <li>
+                  <span class="ev-time">10:30</span
+                  ><span class="ev-name">Romería popular a Armentia</span
+                  ><span class="ev-place">Basílica de Armentia</span>
+                </li>
+                <li>
+                  <span class="ev-time">12:00</span
+                  ><span class="ev-name">Misa solemne</span
+                  ><span class="ev-place">Basílica de Armentia</span>
+                </li>
+                <li>
+                  <span class="ev-time">Mañana</span
+                  ><span class="ev-name">Tamborrada Biznietos de Celedón</span
                   ><span class="ev-place">Centro ciudad</span>
                 </li>
                 <li>
-                  <span class="ev-time">Todo el día</span
-                  ><span class="ev-name">Romería popular a Armentia</span
-                  ><span class="ev-place">Basílica de San Prudencio</span>
-                </li>
-                <li>
-                  <span class="ev-time">Mañana</span
-                  ><span class="ev-name">Concurso gastronómico</span
-                  ><span class="ev-place">Campas de Armentia</span>
-                </li>
-                <li>
-                  <span class="ev-time">Mañana</span
-                  ><span class="ev-name">Deporte rural vasco</span
-                  ><span class="ev-place">Campas de Armentia</span>
-                </li>
-                <li>
                   <span class="ev-time">Tarde</span
-                  ><span class="ev-name">Conciertos y espectáculos</span
-                  ><span class="ev-place">Plaza de la Provincia</span>
+                  ><span class="ev-name"
+                    >Tamborrada infantil · Herri kirolak · Dantzak</span
+                  ><span class="ev-place">Armentia y centro</span>
+                </li>
+                <li>
+                  <span class="ev-time">18:00</span
+                  ><span class="ev-name">Concierto Txapela Brava</span
+                  ><span class="ev-place">Campas de Armentia</span>
+                </li>
+                <li>
+                  <span class="ev-time">21:00</span
+                  ><span class="ev-name">Concierto Aldaia Larrein</span
+                  ><span class="ev-place">Campas de Armentia</span>
                 </li>
               </ul>
             </article>
@@ -278,18 +368,19 @@
                   <span class="prog-weekday">Miércoles</span>
                   <span class="prog-month">Abril</span>
                 </div>
-                <div class="prog-day-tag">Actividades</div>
+                <div class="prog-day-tag">Cultura &amp; Circo</div>
               </div>
               <ul class="prog-events">
                 <li>
-                  <span class="ev-time">Mañana</span
-                  ><span class="ev-name">Donación de sangre</span
+                  <span class="ev-time">Todo el día</span
+                  ><span class="ev-name"
+                    >Circo contemporáneo · Propuestas escénicas</span
                   ><span class="ev-place">Centro ciudad</span>
                 </li>
                 <li>
-                  <span class="ev-time">Todo el día</span
-                  ><span class="ev-name">Actividades populares</span
-                  ><span class="ev-place">Vitoria-Gasteiz</span>
+                  <span class="ev-time">Noche</span
+                  ><span class="ev-name">Jonkass en concierto</span
+                  ><span class="ev-place">Plaza del Arca · Euskal Gunea</span>
                 </li>
               </ul>
             </article>
@@ -301,18 +392,13 @@
                   <span class="prog-weekday">Jueves</span>
                   <span class="prog-month">Abril</span>
                 </div>
-                <div class="prog-day-tag">Concierto</div>
+                <div class="prog-day-tag">Fiesta Ochentera</div>
               </div>
               <ul class="prog-events">
                 <li>
-                  <span class="ev-time">Noche</span
-                  ><span class="ev-name">Concierto de Kalakan</span
+                  <span class="ev-time">21:00</span
+                  ><span class="ev-name">Los 40 Classic · Fiesta ochentera</span
                   ><span class="ev-place">Plaza de la Provincia</span>
-                </li>
-                <li>
-                  <span class="ev-time">Noche</span
-                  ><span class="ev-name">Música en directo</span
-                  ><span class="ev-place">Casco Viejo</span>
                 </li>
               </ul>
             </article>
@@ -322,25 +408,38 @@
                 <div class="prog-day-num">1 May</div>
                 <div>
                   <span class="prog-weekday">Viernes</span>
-                  <span class="prog-month">Romería de cierre</span>
+                  <span class="prog-month">Romería Estíbaliz</span>
                 </div>
-                <div class="prog-day-tag tag-estibaliz">Estíbaliz</div>
+                <div class="prog-day-tag tag-estibaliz">
+                  50 aniv. Feria Desagravios
+                </div>
               </div>
               <ul class="prog-events">
                 <li>
-                  <span class="ev-time">Mañana</span
-                  ><span class="ev-name"
-                    >Romería a Nuestra Señora de Estíbaliz</span
+                  <span class="ev-time">9:00</span
+                  ><span class="ev-name">Romería · Basílica de Estíbaliz</span
                   ><span class="ev-place">Cerro de Estíbaliz</span>
                 </li>
                 <li>
-                  <span class="ev-time">Tarde</span
-                  ><span class="ev-name">Concursos, talleres y animación</span
-                  ><span class="ev-place">Campas de Estíbaliz</span>
+                  <span class="ev-time">Todo el día</span
+                  ><span class="ev-name"
+                    >Concursos · Talleres · Herri kirolak · Bertsolaris ·
+                    Dantzak</span
+                  ><span class="ev-place">Entorno de Estíbaliz</span>
+                </li>
+                <li>
+                  <span class="ev-time">Mediodía</span
+                  ><span class="ev-name"
+                    >Feria de los Desagravios · 50 aniversario</span
+                  ><span class="ev-place">Estíbaliz</span>
                 </li>
               </ul>
             </article>
           </div>
+            </div>
+            <button class="carousel-btn carousel-next" id="progNext" aria-label="Día siguiente">&#8594;</button>
+          </div>
+          <div class="carousel-dots" id="progDots"></div>
         </div>
       </section>
 
@@ -373,10 +472,9 @@
                   <span class="card-num-deco">01</span>
                 </div>
                 <div class="card-body">
-                  <div class="card-tag">Música · 50 aniversario</div>
+                  <div class="card-tag">Música · Tradición</div>
                   <h3 class="card-title">La Tamborrada</h3>
                   <p class="card-hist">
-                    La Tamborrada de Álava celebra en 2026 su 50 aniversario.
                     Nació en los años 70 como homenaje a las sociedades
                     gastronómicas alavesas, inspirada en la mítica tamborrada
                     donostiarra.
@@ -384,13 +482,14 @@
                   <p class="card-body-text">
                     Cocineros y socios de cuadrillas desfilan vestidos con
                     delantales blancos y sombreros al son del <em>txistu</em> y
-                    el tambor por el Casco Medieval. El desfile nocturno arranca
-                    a las 23:30 del 27 de abril, con concentración en la Plaza
-                    de la Provincia.
+                    el tambor. El 27 de abril hay dos sesiones: a las 19:00 y a
+                    medianoche.
                   </p>
                   <div class="card-meta">
-                    <span class="meta-day">📅 27 de abril · 23:30h</span>
-                    <span class="meta-place">📍 Casco Medieval</span>
+                    <span class="meta-day"
+                      >📅 27 de abril · 19:00h y 00:00h</span
+                    >
+                    <span class="meta-place">📍 Centro ciudad</span>
                   </div>
                 </div>
               </article>
@@ -401,13 +500,11 @@
                   <span class="card-num-deco">02</span>
                 </div>
                 <div class="card-body">
-                  <div class="card-tag">Música · 100 aniversario</div>
+                  <div class="card-tag">Música · Espectáculo piromusical</div>
                   <h3 class="card-title">La Retreta</h3>
                   <p class="card-hist">
-                    En 2026 se cumplen exactamente 100 años desde que por
-                    primera vez se interpretó la retreta desde el balcón del
-                    Palacio de la Diputación Foral de Álava, en la Plaza de la
-                    Provincia.
+                    Desde el balcón del Palacio de la Diputación Foral de Álava,
+                    en la Plaza de la Provincia, la víspera del Día Grande.
                   </p>
                   <p class="card-body-text">
                     El Coro Joven de Álava, músicos locales y agrupaciones
@@ -643,7 +740,9 @@
         <div class="container">
           <div class="section-tag light">Galería</div>
           <h2 class="section-title light">
-            La fiesta en imágenes y vídeos<br /><em> (pincha sobre cada tarjeta para ver su contenido)</em>
+            La fiesta en imágenes y vídeos<br /><em>
+              (pincha sobre cada tarjeta para ver su contenido)</em
+            >
           </h2>
         </div>
 
@@ -756,7 +855,13 @@
             28 de abril de 2026 · Vitoria-Gasteiz y Armentia
           </p>
           <a href="#" class="cta-link">Volver al inicio ↑</a>
-          <a href="https://camila-studio-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-link cta-link--secondary">Conoce a la creadora ✦</a>
+          <a
+            href="https://camila-studio-portfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-link cta-link--secondary"
+            >Conoce a la creadora ✦</a
+          >
         </div>
       </section>
     </main>
@@ -787,7 +892,16 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>Proyecto web educativo · Fiestas de Álava 2026 · <a href="https://camila-studio-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-portfolio-link">Diseñado por Camila Bedoya</a></p>
+          <p>
+            Proyecto web educativo · Fiestas de Álava 2026 ·
+            <a
+              href="https://camila-studio-portfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-portfolio-link"
+              >Diseñado por Camila Bedoya</a
+            >
+          </p>
         </div>
       </div>
     </footer>
