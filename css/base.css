@@ -1,0 +1,85 @@
+/* ══════════════════════════════════════════════════════
+   FIESTAS DE ÁLAVA 2026 · San Prudencio
+   base.css — Reset, variables CSS, tipografía, container
+   ══════════════════════════════════════════════════════ */
+
+/* RESET & BASE */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #1A1A18;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* CSS CUSTOM PROPERTIES */
+:root {
+  --blue:   #7EC8E3;
+  --coral:  #FF6B47;
+  --yellow: #FFD93D;
+  --pink:   #FF8FA3;
+  --mint:   #A8E6CF;
+  --red:    #C8463A;
+  --dark:   #1A1A18;
+  --border: 2.5px solid #1A1A18;
+  --shadow: 3px 3px 0 #1A1A18;
+  --shadow-lg: 5px 5px 0 #1A1A18;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --nav-h: 62px;
+}
+
+/* CONTAINER */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* BANDA MULTICOLOR */
+.band {
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--coral)  0 60px,
+    var(--yellow) 60px 120px,
+    var(--pink)   120px 180px,
+    var(--blue)   180px 240px,
+    var(--red)    240px 300px,
+    var(--mint)   300px 360px
+  );
+}
+
+/* SECTION COMMONS */
+.section-tag {
+  font-size: .6rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(26,26,24,.5);
+  margin-bottom: 6px;
+}
+.section-tag.light { color: rgba(255,255,255,.5); }
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: .9;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+.section-title.light { color: #fff; }
+.section-title em {
+  font-style: italic;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: .52em;
+  color: var(--coral);
+}
+.section-title.light em { color: var(--yellow); }
+
+.section-desc {
+  font-size: .88rem;
+  color: rgba(26,26,24,.62);
+  line-height: 1.68;
+  max-width: 580px;
+  margin-bottom: 16px;
+}
+.section-desc.light { color: rgba(255,255,255,.6); }

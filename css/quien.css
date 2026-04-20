@@ -1,0 +1,48 @@
+/* ══════════════════════════════════════════════════════
+   quien.css — .quien, .quien-grid, .saint-card, .data-row
+   ══════════════════════════════════════════════════════ */
+
+.quien { background: #fff; padding: 120px 0 72px; }
+.quien-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 24px;
+}
+.quien-text p {
+  font-size: .9rem;
+  line-height: 1.75;
+  color: rgba(26,26,24,.78);
+  margin-bottom: 16px;
+}
+.quien-text strong { color: var(--dark); }
+
+.saint-card {
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--blue);
+}
+.saint-card-inner { padding: 28px; }
+.saint-icon-big {
+  font-size: 5rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  color: var(--dark);
+  opacity: .2;
+}
+.saint-card-data { display: flex; flex-direction: column; gap: 8px; }
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 12px;
+  background: rgba(255,255,255,.6);
+  border-radius: 8px;
+  font-size: .8rem;
+}
+.data-row span { color: rgba(26,26,24,.5); font-size: .68rem; }
+.data-row strong { color: var(--dark); }

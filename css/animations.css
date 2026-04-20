@@ -1,0 +1,137 @@
+/* ══════════════════════════════════════════════════════
+   animations.css — @keyframes, .anim-*, .deco-float, .deco-circle
+   ══════════════════════════════════════════════════════ */
+
+/* ── Keyframes generales ── */
+@keyframes float1  { 0%,100%{transform:translateY(0) rotate(-8deg)} 50%{transform:translateY(-12px) rotate(4deg)} }
+@keyframes float2  { 0%,100%{transform:translateY(0) rotate(12deg)} 50%{transform:translateY(-16px) rotate(-6deg)} }
+@keyframes float3  { 0%,100%{transform:translateY(0) rotate(0deg)}  50%{transform:translateY(-8px) rotate(15deg)} }
+@keyframes wiggle  { 0%,100%{transform:rotate(-3deg)} 50%{transform:rotate(3deg)} }
+@keyframes iconPop { 0%{transform:scale(1)} 40%{transform:scale(1.4)} 70%{transform:scale(.92)} 100%{transform:scale(1.15)} }
+
+/* ── Keyframes hero blobs & decos ── */
+@keyframes blobFloat { 0%,100%{transform:scale(1) translate(0,0);} 50%{transform:scale(1.06) translate(6px,-10px);} }
+@keyframes deco1 { 0%,100%{transform:translateY(0) rotate(-8deg);} 50%{transform:translateY(-14px) rotate(5deg);} }
+@keyframes deco2 { 0%,100%{transform:translateY(0) rotate(12deg);} 50%{transform:translateY(-18px) rotate(-5deg);} }
+@keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+
+/* ── Keyframes entrada de sección ── */
+@keyframes slideInLeft { from{opacity:0;transform:translateX(-60px);} to{opacity:1;transform:translateX(0);} }
+@keyframes slideInRight { from{opacity:0;transform:translateX(60px);} to{opacity:1;transform:translateX(0);} }
+@keyframes slideInUp { from{opacity:0;transform:translateY(40px);} to{opacity:1;transform:translateY(0);} }
+@keyframes scaleIn { from{opacity:0;transform:scale(0.85);} to{opacity:1;transform:scale(1);} }
+@keyframes fadeInRotate { from{opacity:0;transform:rotate(-4deg) scale(0.95);} to{opacity:1;transform:rotate(0deg) scale(1);} }
+@keyframes countUp { from{transform:translateY(20px);opacity:0;} to{transform:translateY(0);opacity:1;} }
+
+/* ── Keyframes hero scroll ── */
+@keyframes trainIn  { from{ transform: translateX(-110%); } to{ transform: translateX(0); } }
+@keyframes trainOut { from{ transform: translateX(0); } to{ transform: translateX(110%); } }
+@keyframes heroElIn  { from{ opacity:0; transform: translateY(40px) scale(0.95); } to{ opacity:1; transform: translateY(0) scale(1); } }
+@keyframes heroElOut { from{ opacity:1; transform: translateY(0) scale(1); } to{ opacity:0; transform: translateY(-30px) scale(0.97); } }
+@keyframes heroUp { from { opacity: 0; transform: translateY(40px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes heroDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-28px); } }
+@keyframes trainLeft { from { transform: translateX(-110%); } to { transform: translateX(0); } }
+@keyframes trainRight { from { transform: translateX(0); } to { transform: translateX(110%); } }
+
+/* ── Keyframes timeline & shimmer ── */
+@keyframes tlPulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,107,71,.4);} 50%{box-shadow:0 0 0 8px rgba(255,107,71,0);} }
+@keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+
+/* ── Keyframes decorativos flotantes globales ── */
+@keyframes floatA { 0%,100%{transform:translateY(0) rotate(-8deg);} 50%{transform:translateY(-18px) rotate(6deg);} }
+@keyframes floatB { 0%,100%{transform:translateY(0) rotate(10deg);} 50%{transform:translateY(-22px) rotate(-8deg);} }
+@keyframes floatC { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-12px) scale(1.08);} }
+@keyframes floatD { 0%,100%{transform:translateY(0) rotate(0deg);} 50%{transform:translateY(-16px) rotate(180deg);} }
+@keyframes floatE { 0%,100%{transform:translate(0,0) rotate(-5deg);} 50%{transform:translate(8px,-14px) rotate(10deg);} }
+
+/* ── Clases de animación por scroll ── */
+.anim-left  { opacity:0; transform:translateX(-60px); transition: opacity .7s ease, transform .7s cubic-bezier(.34,1.56,.64,1); }
+.anim-right { opacity:0; transform:translateX(60px);  transition: opacity .7s ease, transform .7s cubic-bezier(.34,1.56,.64,1); }
+.anim-up    { opacity:0; transform:translateY(50px);  transition: opacity .6s ease, transform .6s cubic-bezier(.34,1.56,.64,1); }
+.anim-scale { opacity:0; transform:scale(0.88);       transition: opacity .6s ease, transform .6s cubic-bezier(.34,1.56,.64,1); }
+.anim-rotate{ opacity:0; transform:rotate(-5deg) scale(0.9); transition: opacity .7s ease, transform .7s cubic-bezier(.34,1.56,.64,1); }
+.anim-left.in, .anim-right.in, .anim-up.in, .anim-scale.in, .anim-rotate.in { opacity:1; transform:none; }
+
+.anim-delay-1 { transition-delay: .1s; }
+.anim-delay-2 { transition-delay: .2s; }
+.anim-delay-3 { transition-delay: .3s; }
+.anim-delay-4 { transition-delay: .4s; }
+.anim-delay-5 { transition-delay: .5s; }
+
+/* Línea decorativa animada bajo títulos de sección */
+.section-title-wrap { position:relative; display:inline-block; }
+.section-title-wrap::after { content:''; position:absolute; bottom:-8px; left:0; width:0; height:4px; background:#FF6B47; border-radius:2px; transition: width .8s cubic-bezier(.34,1.56,.64,1); }
+.section-title-wrap.in::after { width:100%; }
+
+/* Tarjetas del programa con efecto entrada escalonada */
+.day-card { opacity:0; transform:translateY(30px) scale(0.95); transition: opacity .5s ease, transform .5s cubic-bezier(.34,1.56,.64,1), box-shadow .2s, border-color .2s; }
+.day-card.in { opacity:1; transform:none; }
+
+/* Punto del timeline con pulso */
+.tl-dot { animation: tlPulse 2s ease-in-out infinite; }
+
+/* Banda multicolor con shimmer */
+.band { background-size: 200% auto; animation: shimmer 3s linear infinite; }
+
+/* Chips con rebote al aparecer */
+.chip { transition: transform .15s cubic-bezier(.34,1.56,.64,1), box-shadow .15s, background .15s, color .15s, opacity .3s; }
+
+/* Galería items con entrada escalonada */
+.gallery-item, .gal-item { opacity:0; transform:scale(0.9); transition: opacity .5s ease, transform .5s cubic-bezier(.34,1.56,.64,1); }
+.gallery-item.in, .gal-item.in { opacity:1; transform:none; }
+
+/* ── Decorativos flotantes globales ── */
+.deco-float {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  line-height: 1;
+}
+
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Sección QUIÉN FUE ── */
+.quien { position: relative; overflow: hidden; }
+.quien .deco-float:nth-child(1) { font-size: 5rem; opacity: .07; top: 8%;  left: 2%;  animation: floatA 6s ease-in-out infinite; }
+.quien .deco-float:nth-child(2) { font-size: 7rem; opacity: .06; bottom: 10%; right: 3%; animation: floatB 8s ease-in-out infinite 1s; }
+.quien .deco-float:nth-child(3) { font-size: 4rem; opacity: .08; top: 40%; right: 8%; animation: floatC 5s ease-in-out infinite 2s; }
+.quien .deco-circle:nth-child(4){ width:200px; height:200px; background:#FF6B47; opacity:.06; top:-60px; right:15%; animation: floatC 9s ease-in-out infinite; }
+.quien .deco-circle:nth-child(5){ width:140px; height:140px; background:#FFD93D; opacity:.08; bottom:-40px; left:20%; animation: floatA 7s ease-in-out infinite 3s; }
+
+/* ── Sección PROGRAMA ── */
+.programa { position: relative; overflow: hidden; }
+.programa .deco-float:nth-child(1){ font-size: 6rem; opacity:.08; top: 5%;  left: 1%;  animation: floatB 7s ease-in-out infinite; }
+.programa .deco-float:nth-child(2){ font-size: 8rem; opacity:.06; bottom: 5%; right: 2%; animation: floatA 9s ease-in-out infinite 2s; }
+.programa .deco-float:nth-child(3){ font-size: 4rem; opacity:.09; top: 50%; left: 3%;  animation: floatD 12s ease-in-out infinite; }
+.programa .deco-circle:nth-child(4){ width:180px; height:180px; background:#FF6B47; opacity:.1; bottom:-50px; left:-40px; animation: floatC 8s ease-in-out infinite 1s; }
+.programa .deco-circle:nth-child(5){ width:120px; height:120px; background:#C8463A; opacity:.08; top:-30px; right:25%; animation: floatB 6s ease-in-out infinite; }
+
+/* ── Sección BUSCA ── */
+.busca { position: relative; overflow: hidden; }
+.busca .deco-float:nth-child(1){ font-size: 5rem; opacity:.07; top: 10%; right: 2%;  animation: floatE 6s ease-in-out infinite; }
+.busca .deco-float:nth-child(2){ font-size: 7rem; opacity:.06; bottom: 8%; left: 1%;  animation: floatA 8s ease-in-out infinite 1s; }
+.busca .deco-float:nth-child(3){ font-size: 4rem; opacity:.08; top: 55%; right: 5%;  animation: floatB 5s ease-in-out infinite 2s; }
+.busca .deco-circle:nth-child(4){ width:220px; height:220px; background:#FF8FA3; opacity:.1; top:-70px; right:-50px; animation: floatC 10s ease-in-out infinite; }
+.busca .deco-circle:nth-child(5){ width:150px; height:150px; background:#FFD93D; opacity:.09; bottom:-50px; left:10%; animation: floatD 8s ease-in-out infinite 2s; }
+.busca .deco-circle:nth-child(6){ width:90px;  height:90px;  background:#7EC8E3; opacity:.12; top:40%; left:2%; animation: floatA 6s ease-in-out infinite 1s; }
+
+/* ── Sección GALERÍA ── */
+.galeria { position: relative; overflow: hidden; }
+.galeria .deco-float:nth-child(1){ font-size: 6rem; opacity:.06; top: 5%;  left: 2%;  animation: floatA 7s ease-in-out infinite; }
+.galeria .deco-float:nth-child(2){ font-size: 5rem; opacity:.05; bottom: 15%; right: 3%; animation: floatB 9s ease-in-out infinite 1s; }
+.galeria .deco-float:nth-child(3){ font-size: 3.5rem; opacity:.07; top: 45%; right: 2%; animation: floatC 5s ease-in-out infinite 2s; }
+.galeria .deco-circle:nth-child(4){ width:200px; height:200px; background:#FF6B47; opacity:.06; top:-60px; right:10%; animation: floatC 11s ease-in-out infinite; }
+.galeria .deco-circle:nth-child(5){ width:130px; height:130px; background:#FFD93D; opacity:.07; bottom:10%; left:-40px; animation: floatA 8s ease-in-out infinite 3s; }
+
+/* Asegurar que el contenido va encima */
+.quien .container,
+.programa .container,
+.busca .container,
+.galeria .container,
+.galeria__grid { position: relative; z-index: 1; }

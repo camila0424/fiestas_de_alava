@@ -1,0 +1,153 @@
+/* ══════════════════════════════════════════════════════
+   tradiciones.css — .tradiciones, .trad-card, .carousel-wrapper, .carousel-dots
+   ══════════════════════════════════════════════════════ */
+
+.tradiciones {
+  background: var(--pink);
+  padding: 72px 0;
+  position: relative;
+  overflow: hidden;
+}
+.tradiciones::after {
+  content: '♪';
+  position: absolute;
+  font-size: 18rem;
+  color: rgba(255,255,255,.18);
+  left: -20px; bottom: -40px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+}
+.carousel-track-outer { overflow: hidden; flex: 1; }
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform .4s cubic-bezier(.25,.46,.45,.94);
+}
+
+.trad-card {
+  flex: 0 0 280px;
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+}
+.trad-card:hover {
+  transform: translateY(-8px) rotate(-1.5deg);
+  box-shadow: 7px 11px 0 var(--dark);
+}
+.trad-card:hover .card-icon {
+  animation: iconPop .4s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+.trad-card:hover .card-num-deco {
+  font-size: 3.8rem;
+  opacity: .22;
+}
+
+.card-icon-wrap {
+  height: 52px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+.trad-card[data-color="red"]    .card-icon-wrap { background: var(--coral); }
+.trad-card[data-color="amber"]  .card-icon-wrap { background: var(--yellow); }
+.trad-card[data-color="green"]  .card-icon-wrap { background: var(--blue); }
+.trad-card[data-color="teal"]   .card-icon-wrap { background: var(--mint); }
+.trad-card[data-color="purple"] .card-icon-wrap { background: #c9b1ff; }
+.trad-card[data-color="blue"]   .card-icon-wrap { background: #b3d4ff; }
+.trad-card[data-color="pink"]   .card-icon-wrap { background: var(--pink); }
+
+.card-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  animation: wiggle 2s ease-in-out infinite;
+  display: block;
+}
+.card-num-deco {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  color: rgba(0,0,0,.12);
+  line-height: 1;
+  transition: font-size .25s, opacity .25s;
+}
+
+.card-body { padding: 14px 16px 18px; }
+.card-tag {
+  font-size: .52rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 4px;
+}
+.card-title { font-size: .9rem; font-weight: 500; color: var(--dark); margin-bottom: 6px; }
+.card-hist {
+  font-size: .68rem;
+  color: rgba(26,26,24,.5);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-body-text {
+  font-size: .72rem;
+  color: rgba(26,26,24,.7);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 10px;
+  border-top: 1.5px dashed rgba(26,26,24,.12);
+}
+.meta-day, .meta-place { font-size: .62rem; color: rgba(26,26,24,.55); }
+
+.carousel-btn {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .1s, box-shadow .1s;
+}
+.carousel-btn:hover  { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--dark); }
+.carousel-btn:active { transform: translate(2px, 2px);  box-shadow: 1px 1px 0 var(--dark); }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0 24px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(26,26,24,.2);
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.carousel-dot.active { background: var(--dark); transform: scale(1.3); }
