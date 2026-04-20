@@ -8,7 +8,7 @@ El proyecto combina diseño editorial, animaciones y experiencia de usuario para
 
 ## 🌐 Demo
 
-👉 (https://camila0424.github.io/fiestas_de_alava/)
+👉 (https://fiesta-san-prudecio.vercel.app/)
 
 ---
 
