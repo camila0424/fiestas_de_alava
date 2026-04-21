@@ -44,6 +44,68 @@
     if (prevBtn) prevBtn.style.opacity = current === 0        ? '.35' : '1';
     if (nextBtn) nextBtn.style.opacity = current >= maxIdx() ? '.35' : '1';
     updateDots();
+    /* Actualizar posición de la burbuja durante la animación del carrusel */
+    var rafId;
+    function seguirCarrusel() {
+      actualizarBurbuja();
+      rafId = requestAnimationFrame(seguirCarrusel);
+      setTimeout(function() { cancelAnimationFrame(rafId); }, 500);
+    }
+    seguirCarrusel();
+  }
+
+  function actualizarBurbuja() {
+    var burbuja   = document.getElementById('noticiaBurbuja');
+    var card27    = document.querySelector('.prog-day[data-day="27"]');
+    var outer     = document.getElementById('progTrack').parentElement;
+    var container = burbuja ? burbuja.parentElement : null;
+    if (!burbuja || !card27 || !outer || !container) return;
+
+    var outerRect     = outer.getBoundingClientRect();
+    var rect27        = card27.getBoundingClientRect();
+    var containerRect = container.getBoundingClientRect();
+
+    /* Centro horizontal de la tarjeta 27 */
+    var centroX = rect27.left + rect27.width / 2;
+
+    /* La tarjeta es visible si su centro está dentro del contenedor del track */
+    var esVisible = centroX >= outerRect.left + 20 && centroX <= outerRect.right - 20;
+
+    if (esVisible) {
+      /* Centrar la burbuja sobre la tarjeta 27 horizontalmente */
+      var burbujaW     = 240;
+      var leftRelativo = centroX - containerRect.left - burbujaW / 2;
+
+      /* Mantenerla dentro de los límites del container */
+      var maxLeft = containerRect.width - burbujaW - 8;
+      leftRelativo = Math.max(8, Math.min(leftRelativo, maxLeft));
+
+      /* Encima de la tarjeta con 12px de separación */
+      var topRelativo = rect27.top - containerRect.top - burbuja.offsetHeight - 12;
+
+      /* Si no hay espacio arriba, no mostrar */
+      if (topRelativo < 0) {
+        burbuja.classList.remove('visible');
+        setTimeout(function() {
+          if (!burbuja.classList.contains('visible')) burbuja.style.display = 'none';
+        }, 350);
+        return;
+      }
+
+      burbuja.style.left = leftRelativo + 'px';
+      burbuja.style.top  = topRelativo + 'px';
+      burbuja.style.display = 'block';
+      requestAnimationFrame(function() {
+        burbuja.classList.add('visible');
+      });
+
+    } else {
+      /* La tarjeta 27 no está visible — ocultar la burbuja */
+      burbuja.classList.remove('visible');
+      setTimeout(function() {
+        if (!burbuja.classList.contains('visible')) burbuja.style.display = 'none';
+      }, 350);
+    }
   }
 
   function buildDots() {
@@ -78,7 +140,8 @@
     if (Math.abs(dx) > 50) go(current + (dx < 0 ? 1 : -1));
   });
 
-  window.addEventListener('resize', function () { buildDots(); go(current); });
+  window.addEventListener('resize', function () { buildDots(); go(current); actualizarBurbuja(); });
   buildDots();
   go(0);
+
 })();

@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.programa .container { width: 100%; }
+.programa .container { width: 100%; position: relative; }
 
 .programa .section-tag  { color: rgba(26,26,24,.55); }
 .programa .section-title { color: var(--dark); }
@@ -139,3 +139,84 @@
 }
 .ev-name  { font-size: .72rem; font-weight: 500; color: var(--dark); }
 .ev-place { font-size: .62rem; color: rgba(26,26,24,.5); }
+
+/* ── Burbuja noticia Retreta ── */
+.noticia-burbuja {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  width: 240px;
+  background: #fff;
+  border: 2.5px solid #1A1A18;
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: 4px 4px 0 #1A1A18;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .35s ease, transform .35s cubic-bezier(.34,1.56,.64,1);
+  transform: translateY(6px) scale(0.92);
+}
+
+.noticia-burbuja.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Colita apuntando hacia abajo → hacia la tarjeta */
+.noticia-burbuja__tail {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 18px solid #1A1A18;
+}
+.noticia-burbuja__tail::after {
+  content: '';
+  position: absolute;
+  top: -20px; left: -8px;
+  width: 0; height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 15px solid #fff;
+}
+
+.noticia-burbuja__badge {
+  display: inline-block;
+  font-size: .5rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: #FFD93D;
+  color: #1A1A18;
+  border: 1.5px solid #1A1A18;
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-bottom: 7px;
+}
+
+.noticia-burbuja__texto {
+  font-size: .7rem;
+  line-height: 1.6;
+  color: #1A1A18;
+  margin-bottom: 8px;
+  text-align: left;
+}
+.noticia-burbuja__texto strong { color: #1A1A18; }
+.noticia-burbuja__texto em {
+  color: #FF6B47;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.noticia-burbuja__firma {
+  font-size: .58rem;
+  color: rgba(26,26,24,.5);
+  letter-spacing: .05em;
+  border-top: 1.5px dashed rgba(26,26,24,.15);
+  padding-top: 7px;
+}
