@@ -1,4 +1,4 @@
-# 🎉 Fiestas de Álava 2026 · San Prudencio
+#  Fiestas de Álava 2026 · San Prudencio
 
 Aplicación web interactiva desarrollada con **HTML, CSS y JavaScript puro**, que presenta de forma visual, dinámica y moderna las fiestas de San Prudencio en Álava.
 
@@ -6,40 +6,40 @@ El proyecto combina diseño editorial, animaciones y experiencia de usuario para
 
 ---
 
-## 🌐 Demo
+##  Demo
 
 👉 (https://fiesta-san-prudecio.vercel.app/)
 
 ---
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
-### ⏳ Countdown dinámico
+###  Countdown dinámico
 
 * Cuenta regresiva en tiempo real hasta el 28 de abril de 2026
 * Actualización cada segundo con `setInterval`
 * Formateo optimizado con padding
 
-### 📱 Navegación responsive
+###  Navegación responsive
 
 * Menú hamburguesa en móvil
 * Toggle dinámico con JavaScript
 * Cierre automático al seleccionar una opción
 
-### 🎠 Carrusel interactivo
+###  Carrusel interactivo
 
 * Navegación por botones y swipe táctil
 * Cálculo dinámico de tarjetas visibles
 * Indicadores (dots) sincronizados con el estado
 * Adaptación automática en resize
 
-### 🖼️ Lightbox de galería
+###  Lightbox de galería
 
 * Vista ampliada de imágenes
 * Overlay + cierre con botón o tecla `Escape`
 * Render dinámico del contenido
 
-### 🔍 Búsqueda inteligente con filtros
+###  Búsqueda inteligente con filtros
 
 * Filtrado por categorías (música, gastronomía, danza, etc.)
 * Filtros combinables (lógica AND/OR controlada)
@@ -49,7 +49,7 @@ El proyecto combina diseño editorial, animaciones y experiencia de usuario para
 
 ---
 
-## 🎨 Diseño
+##  Diseño
 
 * Estilo visual inspirado en **Risograph**
 * Uso de variables CSS (`:root`) para escalabilidad
@@ -59,7 +59,7 @@ El proyecto combina diseño editorial, animaciones y experiencia de usuario para
 
 ---
 
-## 🧠 Arquitectura del código
+##  Arquitectura del código
 
 El proyecto sigue un enfoque **modular sin frameworks**:
 
@@ -76,7 +76,7 @@ El proyecto sigue un enfoque **modular sin frameworks**:
 
 ---
 
-## 🛠 Tecnologías
+##  Tecnologías
 
 * HTML5
 * CSS3 (Custom Properties, Grid, Flexbox, Animaciones)
@@ -84,7 +84,7 @@ El proyecto sigue un enfoque **modular sin frameworks**:
 
 ---
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 fiestas-alava-2026/
@@ -98,7 +98,7 @@ fiestas-alava-2026/
 
 ---
 
-## ▶️ Cómo ejecutarlo
+##  Cómo ejecutarlo
 
 1. Clonar el repositorio:
 
@@ -116,7 +116,7 @@ No requiere instalación ni dependencias externas.
 
 ---
 
-## 💡 Decisiones técnicas destacadas
+##  Decisiones técnicas destacadas
 
 * Uso de **debounce (280ms)** para mejorar rendimiento en búsqueda
 * Cálculo dinámico del carrusel en lugar de valores fijos
@@ -126,7 +126,7 @@ No requiere instalación ni dependencias externas.
 
 ---
 
-## 📌 Posibles mejoras
+##  Posibles mejoras
 
 * Integración con API real de eventos
 * Persistencia de filtros en localStorage
@@ -136,13 +136,9 @@ No requiere instalación ni dependencias externas.
 
 ---
 
-## 👩‍💻 Autor
+## Autor
 
 Desarrollado por Camila Bedoya
 Frontend Developer · JavaScript · UI/UX
 
----
 
-## 📄 Licencia
-
-Proyecto con fines educativos y de portfolio.
